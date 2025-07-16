@@ -1,24 +1,24 @@
-package com.armeniumstudios.plugintemplate;
+package com.armeniumstudios.teleporttolls;
 
 import java.util.logging.Level;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.armeniumstudios.plugintemplate.command.CommandManager;
-import com.armeniumstudios.plugintemplate.listeners.ListenerManager;
-import com.armeniumstudios.plugintemplate.locale.LocaleManager;
+import com.armeniumstudios.teleporttolls.command.CommandManager;
+import com.armeniumstudios.teleporttolls.listeners.ListenerManager;
+import com.armeniumstudios.teleporttolls.locale.LocaleManager;
 
-public class SpigotPluginTemplate extends JavaPlugin {
+public class TeleportTolls extends JavaPlugin {
 
-    private static SpigotPluginTemplate INSTANCE;
+    private static TeleportTolls INSTANCE;
 
-    public static SpigotPluginTemplate getInstance() {
+    public static TeleportTolls getInstance() {
         return INSTANCE;
     }
 
     @Override
     public void onEnable() {
-        SpigotPluginTemplate.INSTANCE = this;
+        TeleportTolls.INSTANCE = this;
         this.saveDefaultConfig();
         PluginUtilities.init();
         ListenerManager.init();

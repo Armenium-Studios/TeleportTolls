@@ -1,2 +1,2 @@
-# Spigot Plugin Template
+# TeleportTolls
 Welcome to

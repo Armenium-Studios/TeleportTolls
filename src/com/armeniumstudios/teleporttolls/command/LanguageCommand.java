@@ -1,4 +1,4 @@
-package com.armeniumstudios.plugintemplate.command;
+package com.armeniumstudios.teleporttolls.command;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -6,15 +6,15 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.armeniumstudios.plugintemplate.SpigotPluginTemplate;
-import com.armeniumstudios.plugintemplate.locale.LocaleManager;
+import com.armeniumstudios.teleporttolls.TeleportTolls;
+import com.armeniumstudios.teleporttolls.locale.LocaleManager;
 
 public class LanguageCommand implements CommandExecutor {
 
-    SpigotPluginTemplate plugin;
+    TeleportTolls plugin;
 
     public LanguageCommand() {
-        plugin = SpigotPluginTemplate.getInstance();
+        plugin = TeleportTolls.getInstance();
     }
 
     @Override

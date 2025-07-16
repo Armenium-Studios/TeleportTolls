@@ -2,8 +2,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.armeniumstudios.plugintemplate</groupId>
-    <artifactId>PluginTemplate</artifactId>
+    <groupId>com.armeniumstudios.teleporttolls</groupId>
+    <artifactId>TeleportTolls</artifactId>
     <version>0.1.0-alpha</version>
     <repositories>
         <repository>
@@ -59,7 +59,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.armeniumstudios.plugintemplate.Main</mainClass>
+                            <mainClass>com.armeniumstudios.teleporttolls.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

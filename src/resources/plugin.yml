@@ -1,11 +1,11 @@
-name: SpigotPluginTemplate
-main: com.armeniumstudios.plugintemplate.SpigotPluginTemplate
+name: TeleportTolls
+main: com.armeniumstudios.teleporttolls.TeleportTolls
 version: "0.1.0"
 api-version: 1.16
 author: Armenium
-description: Spigot Template
+description: Configure teleport tolls
 website: www.armeniumstudios.com
-depends: []
+depends: [Vault]
 commands:
   language:
     description: "Allows you to change your language"

@@ -1,4 +1,4 @@
-package com.armeniumstudios.plugintemplate.locale;
+package com.armeniumstudios.teleporttolls.locale;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,11 +20,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
-import com.armeniumstudios.plugintemplate.PluginUtilities;
-import com.armeniumstudios.plugintemplate.SpigotPluginTemplate;
+import com.armeniumstudios.teleporttolls.PluginUtilities;
+import com.armeniumstudios.teleporttolls.TeleportTolls;
 
 public class LocaleManager {
-    private static SpigotPluginTemplate plugin;
+    private static TeleportTolls plugin;
 
     private static Set<String> languageFiles = new HashSet<>();
 
@@ -34,7 +34,7 @@ public class LocaleManager {
     private static File playerLanguagesFile;
 
     public static void init() {
-        plugin = SpigotPluginTemplate.getInstance();
+        plugin = TeleportTolls.getInstance();
 
         // Generate the configuration files
         generateFiles();

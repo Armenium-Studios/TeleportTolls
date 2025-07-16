@@ -1,4 +1,4 @@
-package com.armeniumstudios.plugintemplate;
+package com.armeniumstudios.teleporttolls;
 
 public class PluginUtilities {
     private final static String DEFAULT_LANGUAGE = "en_US";

@@ -1,8 +1,8 @@
-package com.armeniumstudios.plugintemplate.listeners;
+package com.armeniumstudios.teleporttolls.listeners;
 
 import org.bukkit.event.Listener;
 
-import com.armeniumstudios.plugintemplate.SpigotPluginTemplate;
+import com.armeniumstudios.teleporttolls.TeleportTolls;
 
 public class ListenerManager {
     private static Listener[] listeners = new Listener[] {
@@ -10,7 +10,7 @@ public class ListenerManager {
     };
 
     public static void init() {
-        SpigotPluginTemplate plugin = SpigotPluginTemplate.getInstance();
+        TeleportTolls plugin = TeleportTolls.getInstance();
 
         for (Listener listener : listeners) {
             plugin.getServer().getPluginManager().registerEvents(listener, plugin);
