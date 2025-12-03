@@ -7,3 +7,7 @@ general:
   invalid_syntax: "Invalid command syntax. \"%s\""
   unknown_error: "An unknown error occurred. Please try again later!"
   player_only: "Sorry, but you need to be a player to run this command."
+  invalid_player: "Please enter a valid player name!"
+tp:
+  cannot_afford: "Sorry, but you cannot currently afford this teleport. The teleport would cost %s, but you only have %s."
+  success: "Successfully teleported to %s! The toll for this teleport was %s."

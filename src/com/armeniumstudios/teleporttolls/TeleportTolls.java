@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.armeniumstudios.teleporttolls.command.CommandManager;
 import com.armeniumstudios.teleporttolls.listeners.ListenerManager;
 import com.armeniumstudios.teleporttolls.locale.LocaleManager;
+import com.armeniumstudios.teleporttolls.util.PluginUtilities;
 
 import net.milkbowl.vault.economy.Economy;
 
@@ -31,6 +32,7 @@ public class TeleportTolls extends JavaPlugin {
         }
 
         this.saveDefaultConfig();
+        ConfigManager.refresh();
         PluginUtilities.init();
         ListenerManager.init();
         LocaleManager.init();

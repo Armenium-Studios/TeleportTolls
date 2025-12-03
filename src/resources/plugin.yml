@@ -24,22 +24,18 @@ commands:
     usage: /deletewarp <name>
     aliases: [delwarp]
     permission: teleporttolls.deletewarp
-  tpa:
-    description: "Request to teleport to a different player."
-    usage: /tpa <player>
+  tpto:
+    description: "Teleport to a player that has allowed you to teleport to them."
+    usage: /tpto <player>
     permission: teleporttolls.tp
-  tpahere:
-    description: "Request to teleport a different player to your location."
-    usage: /tpahere <player>
-    permission: teleporttolls.tp
-  tpaccept:
-    description: "Accept a teleport request from a player."
-    usage: /tpaccept
-    permission: teleporttolls.tp
+  tpallow:
+    description: "Allow a player to teleport to you."
+    usage: /tpallow [player]
+    permission: teleporttolls.tpallow
   tpdeny:
-    description: "Reject a teleport request from a player."
-    usage: /tpdeny
-    permission: teleporttolls.tp
+    description: "Disallow a player from teleporting to you."
+    usage: /tpdeny [player]
+    permission: teleporttolls.tpdeny
 permissions:
   teleporttolls.warp:
     default: true
@@ -47,7 +43,11 @@ permissions:
     default: true
   teleporttolls.deletewarp:
     default: true
-  teleporttolls.tp:
+  teleporttolls.tpto:
     default: true
-  teleporttolls.overridetolls:
+  teleporttolls.tpallow:
+    default: true
+  teleporttolls.tpdeny:
+    default: true
+  teleporttolls.ignoretolls:
     default: false
