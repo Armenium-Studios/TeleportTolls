@@ -9,11 +9,11 @@ import org.bukkit.entity.Player;
 import com.armeniumstudios.teleporttolls.TeleportTolls;
 import com.armeniumstudios.teleporttolls.locale.LocaleManager;
 
-public class LanguageCommand implements CommandExecutor {
+public class TeleportTollsCommand implements CommandExecutor {
 
     TeleportTolls plugin;
 
-    public LanguageCommand() {
+    public TeleportTollsCommand() {
         plugin = TeleportTolls.getInstance();
     }
 

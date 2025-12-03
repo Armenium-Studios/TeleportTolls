@@ -7,7 +7,47 @@ description: Configure teleport tolls
 website: www.armeniumstudios.com
 depends: [Vault]
 commands:
-  language:
-    description: "Allows you to change your language"
-    usage: /language
-    aliases: [locale, lang]
+  teleporttolls:
+    description: "The main TeleportTolls command."
+    usage: /teleporttolls <info/language>
+    aliases: [tt, tptolls]
+  warp:
+    description: "Warp to a predesignated location."
+    usage: /warp <name>
+    permission: teleporttolls.warp
+  createwarp:
+    description: "Create a new warp at your current location."
+    usage: /createwarp <name>
+    permission: teleporttolls.createwarp
+  deletewarp:
+    description: "Delete a warp by its name."
+    usage: /deletewarp <name>
+    aliases: [delwarp]
+    permission: teleporttolls.deletewarp
+  tpa:
+    description: "Request to teleport to a different player."
+    usage: /tpa <player>
+    permission: teleporttolls.tp
+  tpahere:
+    description: "Request to teleport a different player to your location."
+    usage: /tpahere <player>
+    permission: teleporttolls.tp
+  tpaccept:
+    description: "Accept a teleport request from a player."
+    usage: /tpaccept
+    permission: teleporttolls.tp
+  tpdeny:
+    description: "Reject a teleport request from a player."
+    usage: /tpdeny
+    permission: teleporttolls.tp
+permissions:
+  teleporttolls.warp:
+    default: true
+  teleporttolls.createwarp:
+    default: true
+  teleporttolls.deletewarp:
+    default: true
+  teleporttolls.tp:
+    default: true
+  teleporttolls.overridetolls:
+    default: false
