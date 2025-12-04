@@ -14,5 +14,6 @@ tp:
   success: "Successfully teleported to %s! The toll for this teleport was %s."
   disallowed: "The player you are trying to teleport to currently is not accepting teleports from you. Let them know to run /tpaccept %s so you can do this."
   approved: "Approved %s to teleport to you!"
+  denied: "Denied %s the ability to teleport to you!"
   approved_with_length: "Approved %s to teleport to you for %s minutes!"
   invalid_minutes: "Please provide a valid amount of minutes!"

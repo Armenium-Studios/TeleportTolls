@@ -17,5 +17,9 @@ public class CommandManager {
         PluginCommand tpAllowCommand = TeleportTolls.getInstance().getCommand("tpallow");
         tpAllowCommand.setExecutor(new TeleportAllowCommand());
         tpAllowCommand.setTabCompleter(new PlayerCompleter());
+
+        PluginCommand tpDenyCommand = TeleportTolls.getInstance().getCommand("tpdeny");
+        tpDenyCommand.setExecutor(new TeleportDenyCommand());
+        tpDenyCommand.setTabCompleter(new PlayerCompleter());
     }
 }
