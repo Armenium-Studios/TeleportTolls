@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.armeniumstudios.teleporttolls.TeleportTolls;
-import com.armeniumstudios.teleporttolls.locale.LocaleManager;
+import com.armeniumstudios.teleporttolls.manager.LocaleManager;
 
 public class TeleportTollsCommand implements CommandExecutor {
 

@@ -1,8 +1,9 @@
 package com.armeniumstudios.teleporttolls.util;
 
-import com.armeniumstudios.teleporttolls.ConfigManager;
 import com.armeniumstudios.teleporttolls.TeleportTolls;
-import com.armeniumstudios.teleporttolls.locale.LocaleManager;
+import com.armeniumstudios.teleporttolls.manager.ConfigManager;
+import com.armeniumstudios.teleporttolls.manager.LocaleManager;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;

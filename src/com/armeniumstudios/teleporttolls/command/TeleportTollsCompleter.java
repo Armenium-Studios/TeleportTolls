@@ -1,12 +1,13 @@
 package com.armeniumstudios.teleporttolls.command;
 
-import com.armeniumstudios.teleporttolls.locale.LocaleManager;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
+
+import com.armeniumstudios.teleporttolls.manager.LocaleManager;
 
 public class TeleportTollsCompleter implements TabCompleter {
 

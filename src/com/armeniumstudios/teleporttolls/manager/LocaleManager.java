@@ -1,4 +1,4 @@
-package com.armeniumstudios.teleporttolls.locale;
+package com.armeniumstudios.teleporttolls.manager;
 
 import java.io.File;
 import java.io.IOException;

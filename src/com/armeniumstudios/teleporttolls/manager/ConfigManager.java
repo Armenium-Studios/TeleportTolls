@@ -1,6 +1,8 @@
-package com.armeniumstudios.teleporttolls;
+package com.armeniumstudios.teleporttolls.manager;
 
 import org.bukkit.configuration.file.FileConfiguration;
+
+import com.armeniumstudios.teleporttolls.TeleportTolls;
 
 public class ConfigManager {
   private static int teleportRequestExpirationSeconds;
