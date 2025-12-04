@@ -29,12 +29,12 @@ commands:
     usage: /tpto <player>
     permission: teleporttolls.tp
   tpallow:
-    description: "Allow a player to teleport to you."
-    usage: /tpallow [player]
+    description: "Allow a player to teleport to you. Optionally set for how many minutes they should be allowed to teleport to you. If no minute length is set, the teleport allow will be indefinite."
+    usage: /tpallow <player> [minutes]
     permission: teleporttolls.tpallow
   tpdeny:
     description: "Disallow a player from teleporting to you."
-    usage: /tpdeny [player]
+    usage: /tpdeny <player>
     permission: teleporttolls.tpdeny
 permissions:
   teleporttolls.warp:

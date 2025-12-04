@@ -9,7 +9,7 @@ import com.armeniumstudios.teleporttolls.command.CommandManager;
 import com.armeniumstudios.teleporttolls.listeners.ListenerManager;
 import com.armeniumstudios.teleporttolls.manager.ConfigManager;
 import com.armeniumstudios.teleporttolls.manager.LocaleManager;
-import com.armeniumstudios.teleporttolls.manager.TeleportApprovalsManager;
+import com.armeniumstudios.teleporttolls.manager.PlayerConfigManager;
 import com.armeniumstudios.teleporttolls.util.PluginUtilities;
 
 import net.milkbowl.vault.economy.Economy;
@@ -35,7 +35,7 @@ public class TeleportTolls extends JavaPlugin {
 
         this.saveDefaultConfig();
         ConfigManager.refresh();
-        TeleportApprovalsManager.init();
+        PlayerConfigManager.init();
         PluginUtilities.init();
         ListenerManager.init();
         LocaleManager.init();

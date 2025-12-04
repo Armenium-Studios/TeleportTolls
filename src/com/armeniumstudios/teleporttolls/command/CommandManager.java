@@ -13,5 +13,9 @@ public class CommandManager {
         PluginCommand tpToCommand = TeleportTolls.getInstance().getCommand("tpto");
         tpToCommand.setExecutor(new TeleportToCommand());
         tpToCommand.setTabCompleter(new PlayerCompleter());
+
+        PluginCommand tpAllowCommand = TeleportTolls.getInstance().getCommand("tpallow");
+        tpAllowCommand.setExecutor(new TeleportAllowCommand());
+        tpAllowCommand.setTabCompleter(new PlayerCompleter());
     }
 }

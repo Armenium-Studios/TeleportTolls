@@ -4,7 +4,6 @@ import com.armeniumstudios.teleporttolls.TeleportTolls;
 import com.armeniumstudios.teleporttolls.manager.LocaleManager;
 import com.armeniumstudios.teleporttolls.manager.PlayerConfigManager;
 import com.armeniumstudios.teleporttolls.model.TeleportApproval;
-import com.armeniumstudios.teleporttolls.util.TollUtilities;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -12,11 +11,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class TeleportToCommand implements CommandExecutor {
+public class TeleportAllowCommand implements CommandExecutor {
 
   TeleportTolls plugin;
 
-  public TeleportToCommand() {
+  public TeleportAllowCommand() {
     plugin = TeleportTolls.getInstance();
   }
 
@@ -29,25 +28,44 @@ public class TeleportToCommand implements CommandExecutor {
 
     Player player = (Player) sender;
 
-    if (args.length == 1) {
-      Player playerTo = Bukkit.getPlayer(args[0]);
-      if (playerTo == null) {
+    if (args.length == 1 || args.length == 2) {
+      Player playerFrom = Bukkit.getPlayer(args[0]);
+      if (playerFrom == null) {
         sender.sendMessage(
             ChatColor.RED + LocaleManager.getMessage(sender, "general.invalid_player"));
         return true;
-      } else if (playerTo.equals(player)) {
+      } else if (playerFrom.equals(player)) {
         sender.sendMessage(
             ChatColor.RED + LocaleManager.getMessage(sender, "general.invalid_self"));
         return true;
       }
 
-      if (!PlayerConfigManager.isApprovalActive(new TeleportApproval(playerTo, player))) {
-        sender.sendMessage(
-            ChatColor.RED + LocaleManager.getMessage(sender, "tp.disallowed", player.getName()));
-        return true;
+      long minutes = -1;
+      if (args.length == 2) {
+        try {
+          minutes = Integer.parseInt(args[1]);
+        } catch (NumberFormatException e) {
+          sender.sendMessage(
+              ChatColor.RED + LocaleManager.getMessage(sender, "tp.invalid_minutes"));
+          return true;
+        }
       }
 
-      TollUtilities.teleportWithToll(player, playerTo);
+      PlayerConfigManager.saveApproval(new TeleportApproval(player, playerFrom, minutes));
+      if (minutes < 0) {
+        sender.sendMessage(
+            ChatColor.GREEN
+                + LocaleManager.getMessage(
+                    sender, "tp.approved", playerFrom.getDisplayName() + ChatColor.GREEN));
+      } else {
+        sender.sendMessage(
+            ChatColor.GREEN
+                + LocaleManager.getMessage(
+                    sender,
+                    "tp.approved_with_length",
+                    playerFrom.getDisplayName() + ChatColor.GREEN,
+                    minutes));
+      }
 
       return true;
     }

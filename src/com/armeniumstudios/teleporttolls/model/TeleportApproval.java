@@ -7,10 +7,10 @@ public class TeleportApproval {
   private final Player approvee;
   private final long expiresAt;
 
-  public TeleportApproval(Player approver, Player approvee, long seconds) {
+  public TeleportApproval(Player approver, Player approvee, long minutes) {
     this.approver = approver;
     this.approvee = approvee;
-    this.expiresAt = System.currentTimeMillis() + (seconds * 1000L);
+    this.expiresAt = minutes < 0 ? -1 : System.currentTimeMillis() + (minutes * 1000L * 60L);
   }
 
   public TeleportApproval(Player approver, Player approvee) {
